@@ -32,18 +32,21 @@ public class KakaoFailture_rate {
 		}
 		
 		System.out.println();
+//		double failture = 0.0;
+		int [] answer = new int[N];
 		
 		for(int i = 0; i < stages.length; i++) {
 			int ctn = 0;
-			for(int j = 1; j < stages.length; j++) {
+			for(int j = 0; j < stages.length; j++) {
 				if(stages[i] == stages[j]) {
 					ctn++;
 				}
 			}
 			System.out.println("stage: " + stages[i] + " ctn: " + ctn);
-			
+			int failture = totalUser - i;
+			System.out.println("stages~: " + stages[i+ctn]  + " failture: " + failture);
 		}
-		double[] failture = new double [totalUser];
+		
 		
 		
 		
